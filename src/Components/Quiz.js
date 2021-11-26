@@ -13,7 +13,7 @@ function Quiz() {
         if(Questions[currentQuestion].answer == optionChosen){
             setScore(score + 1);
         }
-        alert(score);
+       //alert(score);
         setCurrentQuestion(currentQuestion + 1);
     };
 
@@ -28,16 +28,16 @@ function Quiz() {
         <div className="Quiz">
             <h1>{Questions[currentQuestion].prompt}</h1>
             <div className="options">
-                <button onClick={ () => setOptionChosen("A")}> {Questions[currentQuestion].optionA} </button>
+                <button onClick={ () => setOptionChosen("A") }> {Questions[currentQuestion].optionA} </button>
                 <button onClick={ () => setOptionChosen("B")}> {Questions[currentQuestion].optionB} </button>
                 <button onClick={ () => setOptionChosen("C")}> {Questions[currentQuestion].optionC} </button>
                 <button onClick={ () => setOptionChosen("D")}> {Questions[currentQuestion].optionD} </button>
             </div>
 
             {currentQuestion == Questions.length - 1 ? (
-                <button onClick={finishQuiz}>Finish Quiz</button>
+                <button className="finishButton" onClick={finishQuiz}>Finish Quiz</button>
             ) : (
-                <button onClick={nextQuestion}>Next Question</button>
+                <button className="nextButton" onClick={nextQuestion}>Next Question</button>
             )}
 
             
