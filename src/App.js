@@ -4,6 +4,7 @@ import MainMenu from './Components/MainMenu';
 import Quiz from './Components/Quiz';
 import EndScreen from './Components/EndScreen';
 import {QuizContext} from "./Helpers/Contexts";
+import Footer from './Components/Footer';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         {gameState === "endScreen" && <EndScreen />}
       </QuizContext.Provider>
 
+      <Footer />
     </div>
   );
 }
