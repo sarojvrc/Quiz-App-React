@@ -1,6 +1,7 @@
 import React,{useState, useContext} from 'react'
 import {Questions} from "../Helpers/QuestionBank";
 import {QuizContext} from "../Helpers/Contexts";
+import "../App.css";
 
 function Quiz() {
 
@@ -24,11 +25,12 @@ function Quiz() {
         setGameState("endScreen")
     }
 
+
     return (
         <div className="Quiz">
             <h1>{Questions[currentQuestion].prompt}</h1>
             <div className="options">
-                <button onClick={ () => setOptionChosen("A") }> {Questions[currentQuestion].optionA} </button>
+                <button onClick={ () => setOptionChosen("A")}> {Questions[currentQuestion].optionA} </button>
                 <button onClick={ () => setOptionChosen("B")}> {Questions[currentQuestion].optionB} </button>
                 <button onClick={ () => setOptionChosen("C")}> {Questions[currentQuestion].optionC} </button>
                 <button onClick={ () => setOptionChosen("D")}> {Questions[currentQuestion].optionD} </button>
