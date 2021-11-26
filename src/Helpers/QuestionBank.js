@@ -1,11 +1,11 @@
 export const Questions = [
     {
-        prompt: "What is 1+3 ?",
-        optionA: "24",
-        optionB: "25",
-        optionC: "4",
-        optionD: "7",
-        answer: "C"
+        prompt: "React is a ?",
+        optionA: "Framework",
+        optionB: "Library",
+        optionC: "Language",
+        optionD: "Module",
+        answer: "B"
     },
     {
         prompt: "Java is a ?",
